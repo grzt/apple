@@ -1,0 +1,43 @@
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:100;
+	src:local('Myriad Set Pro'),//如果系统有这个歌字体，就使用这个字体 
+	url("../font/myriad-set-pro_semibold（可以改为thin，字体会变）.woff") 
+	format("woff");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. 
+	Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+body{
+	font-family: "Myriad Set Pro","微软雅黑";
+}
+
+a标签行内元素，使用justify正好的意思，适应，响应式--------------------***重点属性
+（出现例apple导航效果）下面加div，display：inline-block；width：100%，模仿响应式
+
+.clearfix:after{----------------(相当于在类名为clearfix的后面添加一个属性，可以用于清除浮动，可以添加内容)
+    	content:"";   //不能不写，但是可以写成空，写什么内容，会出现什么内容  
+	display: block; //clearfix默认样式为行内元素
+	clear:both;  //清除浮动
+}                                                               [clearfix是类名，常用习惯为clearfix。可以使其他类名]
+
+
+最小宽度min-width:
+最大宽度max-width:
+
+1em=16px    em以字体大小为基准做计算，大部分浏览器的默认字体都是16px，em可以使3位有效数字的小数
+宽度高度也可以使用em
+
+设置图片间距：外面盒子排满，内部a标签不设置宽，加border。   （设置inline-block，如果代码中出现空格，会有一个始终的边距产生，浮动不会，差别）
+
+图片的宽度自适应：     @media（max-width：数字px）{ 写正常的代码，（要适应的盒子的代码）}
+                       @media（max-width：数字px）{ 写正常的代码，（要适应的盒子的代码）}  //可以多个设置不同的变化
+
+让字消失，去掉样式后的字（font：0/0 a；）
+
+visibility：hidden   占位置   display：none；不占位置 （都不可见）
+
+优先级问题
+
+站长工具--》工具旧版--》代码转换工具--》css压缩格式
